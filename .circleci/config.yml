@@ -5,12 +5,11 @@ jobs:
       - image: circleci/php
     steps:
       - checkout
-      - run:
-          name: install-dependencies
-          command: npm install
       - sonar/analyze
+
 orbs:
   sonar: tom-vanbraband-sns/scanner-no-docker@dev:0.0.2
+
 workflows:
   version: 2
   main:
